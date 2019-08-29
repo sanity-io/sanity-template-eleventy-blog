@@ -1,0 +1,76 @@
+{
+  "version": 0,
+  "title": "Blog with Eleventy",
+  "description": "Fully customizable blog template with a Eleventy front-end.",
+  "previewMedia": {
+    "type": "image",
+    "src": "assets/frontend.jpg",
+    "alt": "A screenshot of the Blog with Eleventy website."
+  },
+  "technologies": [
+    {
+      "id": "eleventy",
+      "name": "Eleventy",
+      "url": "https://www.11ty.io/"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "url": "https://www.netlify.com/"
+    }
+  ],
+  "deployments": [
+    {
+      "id": "studio",
+      "type": "studio",
+      "title": "Sanity Studio",
+      "description": "The Sanity Studio is where you edit and structure your content.",
+      "dir": "./studio",
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "dir": "studio/dist",
+          "cmd": "npm run build-studio && cp ./studio/netlify.toml ./studio/dist"
+        },
+        "requirements": ["build-hook"]
+      },
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/studio.jpg",
+        "alt": "A preview image of the Sanity Studio."
+      }
+    },
+    {
+      "id": "web",
+      "type": "web",
+      "title": "Blog Website",
+      "description": "A simple static site generated blog, made for being easy to customize and update.",
+      "dir": "./web",
+      "requiredTokens": [
+        {
+          "role": "deploy-studio",
+          "label": "GraphQL API Deployer"
+        }
+      ],
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "dir": "web/public",
+          "cmd": "npm run build-web"
+        },
+        "requirements": ["build-hook"]
+      },
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/frontend.jpg",
+        "alt": "A preview image of the blog website."
+      },
+      "requiredCorsOrigins": [
+        {
+          "origin": "http://localhost:8000",
+          "allowCredentials": true
+        }
+      ]
+    }
+  ]
+}
