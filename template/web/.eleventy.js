@@ -1,6 +1,19 @@
 const { DateTime } = require("luxon");
 const util = require('util')
 
+/**
+ * Set up a listener to rebuild on changes made in Sanity.
+ * Add a token to .env.development to rebuild on all changes.
+ */
+const fs = require('fs')
+const client = require('./utils/sanityClient')
+client.listen('*').subscribe(doc => {
+    fs.writeFile('_data/sync.txt', '', (err) => {
+      if(err) throw err;
+      // console.log('Syncing changes')
+    })
+})
+
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("debug", function(value) {
