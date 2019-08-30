@@ -13,8 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@sanity/cli": "^0.142.2",
-    "@sanity/image-url": "0.140.12",
-    "lerna": "^3.13.1"
+    "lerna": "^3.16.4"
   }
 }

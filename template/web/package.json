@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "watch": "npx eleventy --watch --serve",
-    "dev": "npm run watch",
+    "dev": "npx eleventy --watch --serve",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
   },
