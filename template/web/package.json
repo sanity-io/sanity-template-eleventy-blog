@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "watch": "npx eleventy --watch --serve",
-    "dev": "npm run watch",
+    "dev": "concurrently \"npx eleventy --serve\" \"node preview.js\"",
     "now-build": "npm run build",
     "debug": "DEBUG=* npx eleventy"
   },
@@ -18,6 +17,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "@sanity/block-content-to-markdown": "0.0.5",
     "@sanity/client": "^0.142.0",
+    "concurrently": "4.1.2",
     "dotenv": "^8.1.0",
     "groq": "^0.142.0",
     "luxon": "^1.17.2",
