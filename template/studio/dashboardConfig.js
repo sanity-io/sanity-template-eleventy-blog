@@ -3,7 +3,7 @@ export default {
     {
       name: 'sanity-tutorials',
       options: {
-        templateRepoId: 'sanity-io/sanity-template-gatsby-blog'
+        templateRepoId: 'sanity-io/sanity-template-eleventy-blog'
       }
     },
     {name: 'structure-menu'},

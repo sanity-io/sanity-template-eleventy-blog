@@ -46,12 +46,7 @@
       "title": "Blog Website",
       "description": "A simple static site generated blog, made for being easy to customize and update.",
       "dir": "./web",
-      "requiredTokens": [
-        {
-          "role": "deploy-studio",
-          "label": "GraphQL API Deployer"
-        }
-      ],
+      "requiredTokens": [],
       "provider": {
         "name": "netlify",
         "config": {
@@ -68,7 +63,7 @@
       "requiredCorsOrigins": [
         {
           "origin": "http://localhost:8080",
-          "allowCredentials": true
+          "allowCredentials": false
         }
       ]
     }
