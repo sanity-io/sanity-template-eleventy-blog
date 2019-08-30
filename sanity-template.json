@@ -55,7 +55,7 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "dir": "web/public",
+          "dir": "web/_site",
           "cmd": "npm run build-web"
         },
         "requirements": ["build-hook"]
