@@ -1,7 +1,7 @@
 {
   "version": 0,
   "title": "Blog with Eleventy",
-  "description": "Fully customizable blog template with a Eleventy front-end.",
+  "description": "Simple blog starter with an Eleventy front-end.",
   "previewMedia": {
     "type": "image",
     "src": "assets/frontend.jpg",
