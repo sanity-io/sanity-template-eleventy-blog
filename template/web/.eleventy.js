@@ -1,7 +1,13 @@
 const { DateTime } = require("luxon");
 const util = require('util')
+const CleanCSS = require("clean-css");
 
 module.exports = function(eleventyConfig) {
+
+  // https://www.11ty.io/docs/quicktips/inline-css/
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   eleventyConfig.addFilter("debug", function(value) {
     return util.inspect(value, {compact: false})

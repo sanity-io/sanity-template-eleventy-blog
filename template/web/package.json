@@ -17,10 +17,11 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "@sanity/block-content-to-markdown": "0.0.5",
     "@sanity/client": "^0.142.6",
-    "dotenv": "^8.1.0",
+    "clean-css": "^4.2.1",
+    "dotenv": "^8.2.0",
     "groq": "^0.142.0",
-    "luxon": "^1.17.2",
-    "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.0.2"
+    "luxon": "^1.19.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5"
   }
 }
