@@ -17,17 +17,13 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "@sanity/block-content-to-markdown": "0.0.5",
     "@sanity/client": "^0.144.0",
+    "axios": "^0.19.2",
     "clean-css": "^4.2.1",
     "dotenv": "^8.2.0",
     "groq": "^0.142.0",
+    "groq-js": "^0.1.5",
     "luxon": "^1.19.3",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "get-stream": "^5.1.0",
-    "groq-js": "^0.1.5",
-    "stream": "0.0.2"
   }
 }

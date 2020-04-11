@@ -10,6 +10,10 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("jsonDump", function(value) {
+    return JSON.stringify(value, null, 2)
+  })
+
   eleventyConfig.addFilter("debug", function(value) {
     return util.inspect(value, {compact: false})
    });
