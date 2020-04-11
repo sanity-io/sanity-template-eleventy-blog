@@ -23,5 +23,11 @@
     "luxon": "^1.19.3",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "get-stream": "^5.1.0",
+    "groq-js": "^0.1.5",
+    "stream": "0.0.2"
   }
 }
