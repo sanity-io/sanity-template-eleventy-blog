@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-eleventy-blog-studio",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
