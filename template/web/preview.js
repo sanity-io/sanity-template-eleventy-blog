@@ -5,13 +5,23 @@
  */
 const fs = require('fs')
 const client = require('./utils/sanityClient')
+const Eleventy = require("@11ty/eleventy");
+
 async function preview () {
+  let inst = new Eleventy();
+  const eleventyProcess = async (inst) => {
+    console.log('write!')
+    await inst.restart()
+    await inst.write();
+    await inst.eleventyServe.reload()
+  }
+  await inst.init()
+  await eleventyProcess(inst)
+  inst.watch()
+  inst.serve()
   client.listen('*[_type == "post"]').subscribe(async doc => {
     // If the writes happen to quickly the preview will lag
-    debounce(
-      fs.writeFile('_data/sync', '', err => {
-        if (err) throw err
-      }), 200)
+    debounce(eleventyProcess(inst), 100)
   })
 }
 
