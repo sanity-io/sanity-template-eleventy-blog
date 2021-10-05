@@ -18,7 +18,7 @@ export default {
       name: 'alt',
       type: 'string',
       title: 'Alternative text',
-      description: 'Important for SEO and accessiblity.',
+      description: 'Important for accessiblity and SEO.',
       validation: Rule => Rule.error('You have to fill out the alternative text.').required(),
       options: {
         isHighlighted: true
